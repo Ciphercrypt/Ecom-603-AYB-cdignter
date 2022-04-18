@@ -125,5 +125,15 @@ var variable = {
 </script>
 <script src="<?= base_url('assets/js/system.js') ?>"></script>
 <script src="<?= base_url('templatejs/mine.js') ?>"></script>
+
+<script src=""<?= base_url('templatejs/jquery-3.2.1.min.js')?>"></script>
+	<script src="<?= base_url('templatejs/bootstrap.min.js')?>"></script>
+	<script src="<?= base_url('templatejs/jquery.slicknav.min.js')?>"></script>
+	<script src="<?= base_url('templatejs/owl.carousel.min.js')?>"></script>
+	<script src="<?= base_url('templatejs/jquery.nicescroll.min.js')?>"></script>
+	<script src="<?= base_url('templatejs/jquery.zoom.min.js')?>"></script>
+	<script src="<?= base_url('templatejs/jquery-ui.min.js')?>"></script>
+	<script src="<?= base_url('templatejs/main.js')?>"></script>
+
 </body>
 </html>

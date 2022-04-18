@@ -23,6 +23,9 @@ if (typeof datepicker !== 'undefined') {
     });
 }
 
+
+
+
 //Filters Technique
 $('.go-category').click(function () {
     var category = $(this).data('categorie-id');
@@ -45,6 +48,14 @@ $('.brand').click(function () {
     $('[name="brand_id"]').val(brand_id);
     submitForm()
 });
+
+$('.searchProduct').click(function () {
+    $('[name="searchProduct"]').val($(this).val());
+
+    submitForm()
+});
+
+
 $("#search_in_title").keyup(function () {
     $('[name="search_in_title"]').val($(this).val());
 });
