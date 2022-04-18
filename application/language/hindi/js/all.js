@@ -1,0 +1,15 @@
+var lang = { 
+added_to_cart:"कार्ट में ऐड किया]",
+error_to_cart:"शॉपिंग कार्ट के साथ कोई समस्या है !पुनः प्रयास करें!",
+no_products:"कोई डेटा उपलब्ध नहीं है",
+confirm_clear_cart:" क्या आप वाकई कार्ट खाली करना चाहते हैं?",
+cleared_cart:"आपकी कार्ट खाली है",
+are_you_sure:"क्या आप सुनिश्चित हैं?",
+yes:"हाँ ",
+no:"नहीं",
+clear_all:"क्लियर ",
+checkout:"पेमेंट ",
+remove_from_cart:"कार्ट में से हटाए ",
+enter_valid_email:" कृपया मान्य ईमेल पता दर्ज करें",
+discountCodeInvalid:"पासवर्ड अमान्य है",
+};

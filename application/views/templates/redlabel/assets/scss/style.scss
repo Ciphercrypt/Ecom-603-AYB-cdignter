@@ -1,0 +1,42 @@
+.offer-card {
+    position: absolute;
+    right: 0;
+    top: 226px;
+    width: 162px;
+    height: 162px;
+    border-radius: 50%;
+    background: $color;
+    text-align: center;
+    padding-top: 20px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    opacity: 0;
+    &:after {
+        position: absolute;
+        content: "";
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        border: 1px solid #f96790;
+        left: 5px;
+        top: 5px;
+        border-radius: 50%;
+    }
+    span {
+        font-size: 18px;
+        text-transform: lowercase;
+        position: relative;
+        top: 50px;
+        opacity: 0;
+    }
+    h2 {
+        font-size: 72px;
+        font-weight: 400;
+        line-height: 1;
+    }
+    p {
+        text-transform: uppercase;
+        line-height: 1;
+        font-size: 14px;
+    }
+}

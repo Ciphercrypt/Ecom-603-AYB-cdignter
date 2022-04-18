@@ -1,0 +1,15 @@
+var lang = { 
+added_to_cart:"कार्ट मध्ये ऍड केले ",
+error_to_cart:"Проблем с кошницата! Опитайте пак!",
+no_products:"काहीतरी समस्या आहे . कृपया पुन्हा प्रयत्न करा . ",
+confirm_clear_cart:"आपण निवडलेले सगळे प्रॉडक्ट delete होतील . आपणांस मान्य आहे का ?",
+cleared_cart:"आपली कार्ट रिकामी आहे ",
+are_you_sure:"आपणांस खात्री आहे का ?",
+yes:"होय",
+no:"नाही",
+clear_all:"क्लिअर करा ",
+checkout:"पेमेंट ",
+remove_from_cart:"कार्ट मधून delete केले ",
+enter_valid_email:" कृपया  वैध ईमेल पत्ता प्रविष्ट करा",
+discountCodeInvalid:"कोड अवैध आहे ",
+};
