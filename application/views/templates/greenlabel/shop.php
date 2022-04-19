@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <link rel="stylesheet" href="<?= base_url('assets/bootstrap-select-1.12.1/bootstrap-select.min.css') ?>">
+
 <div class="inner-nav">
     <div class="container">
         <?= lang('home') ?> <span class="active"> > <?= lang('shop') ?></span>

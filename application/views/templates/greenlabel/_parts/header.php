@@ -26,7 +26,9 @@
     <link rel="stylesheet" href="<?= base_url('templatecss/owl.carousel.min.css ') ?>" />
     <link rel="stylesheet" href="<?= base_url('templatecss/animate.css ') ?>" />
     <link rel="stylesheet" href="<?= base_url('templatecss/style.css ') ?>" />
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
 
     <link href="<?= base_url('assets/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet" />
@@ -51,9 +53,15 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 </head>
+<style>
+    .mybg-events {
+        background: url('<?=base_url('template/imgs/bg.jpg')?>') no-repeat center center fixed;
+        background-size: cover;
+    }
+</style>
 
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <div class="user-panel">
             <?php if (isset($_SESSION['logged_user'])) { ?>
             <a href="<?= LANG_URL . '/myaccount' ?>" class="my-acc">
@@ -182,7 +190,7 @@
                         <input type="text" class="field" id="search_in_title"
                             value="<?= isset($_GET['search_in_title']) ? htmlspecialchars($_GET['search_in_title']) : '' ?>"
                             placeholder="<?= lang('search_here') ?>">
-                        <button  onclick="submitForm()"><i class="fa fa-search"></i></button>
+                        <button onclick="submitForm()"><i class="fa fa-search"></i></button>
                     </form>
                     <div class="clearfix"></div>
                 </div>
@@ -205,7 +213,7 @@
                                     <li<?= uri_string() == 'shop' || uri_string() == MY_LANGUAGE_ABBR . '/shop' ? ' class="active"' : '' ?>>
                                         <a href="<?= LANG_URL . '/shop' ?>"><?= lang('shop') ?> <i
                                                 class="fa fa-chevron-down"></i></a>
-                                       <!--   <div class="megamenu">
+                                        <!--   <div class="megamenu">
                                            <?php
 
                                             function loop_tree_nav1($nav_categories, $is_recursion = false)
@@ -238,7 +246,7 @@
 
                                                 loop_tree_nav1($nav_categories);
                                             ?> 
-                                        </div> -->
+                                        </div> 
                                         </li>
                                         <?php
                                         if (!empty($nonDynPages)) {
@@ -294,8 +302,9 @@
             </div>
         </div>
     </div>
+ -->
 
-    
+
 
 
 
@@ -306,16 +315,118 @@
                     <div class="col-lg-2 text-center text-lg-left">
                         <!-- logo -->
                         <a href="./index.html" class="site-logo">
-                            <img src="<?= base_url('template/imgs/logo.png') ?>" alt="">
+                            <img src="http://www.ayurcinbio.com/images/logo_new_sm.png" alt="">
                         </a>
                     </div>
                     <div class="col-xl-6 col-lg-5">
-                        <form class="header-search-form" method="GET" id="bigger-search" action="<?= LANG_URL . '/shop' ?>">
-                        <input type="text" value="<?= isset($_GET['search_in_title']) ? htmlspecialchars($_GET['search_in_title']) : '' ?>" name="search_in_title" placeholder="<?= lang('search_here') ?>"  id="search_in_title">
-                        <button onclick="submitForm()"><i class="fa fa-search"></i></button>
-                        </form> 
+
+
+                        <div class="">
+                            <form method="GET" id="bigger-search" class="header-search-form" action="<?= LANG_URL ?>">
+                                <div class="">
+                                    <input type="text" id="search_in_title"
+                                        value="<?= isset($_GET['search_in_title']) ? htmlspecialchars($_GET['search_in_title']) : '' ?>"
+                                        placeholder="<?= lang('search_for') ?>...">
+
+                                    <button onclick="submitForm()" type="button">
+                                        <i class="fa fa-search" aria-hidden="true"></i> </button>
+
+
+                                        <div class="">
+                                            <a class="hidden" href="javascript:void(0);" id="dropdownsearch"
+                                                data-toggle="dropdown">
+                                                <i class="hidden" aria-hidden="true"></i>
+                                            </a>
+                                            <div class="hidden" role="menu" aria-labelledby="dropdownsearch">
+                                                <input type="hidden" name="category"
+                                                    value="<?= isset($_GET['category']) ? htmlspecialchars($_GET['category']) : '' ?>">
+                                                <input type="hidden" name="in_stock"
+                                                    value="<?= isset($_GET['in_stock']) ? htmlspecialchars($_GET['in_stock']) : '' ?>">
+                                                <input type="hidden" name="search_in_title"
+                                                    value="<?= isset($_GET['search_in_title']) ? htmlspecialchars($_GET['search_in_title']) : '' ?>">
+                                                <input type="hidden" name="order_new"
+                                                    value="<?= isset($_GET['order_new']) ? htmlspecialchars($_GET['order_new']) : '' ?>">
+                                                <input type="hidden" name="order_price"
+                                                    value="<?= isset($_GET['order_price']) ? htmlspecialchars($_GET['order_price']) : '' ?>">
+                                                <input type="hidden" name="order_procurement"
+                                                    value="<?= isset($_GET['order_procurement']) ? htmlspecialchars($_GET['order_procurement']) : '' ?>">
+                                                <input type="hidden" name="brand_id"
+                                                    value="<?= isset($_GET['brand_id']) ? htmlspecialchars($_GET['brand_id']) : '' ?>">
+                                                <div class="hidden">
+                                                    <label for="quantity_more"><?= lang('quantity_more_than') ?></label>
+                                                    <input type="text"
+                                                        value="<?= isset($_GET['quantity_more']) ? htmlspecialchars($_GET['quantity_more']) : '' ?>"
+                                                        name="quantity_more" id="quantity_more"
+                                                        placeholder="<?= lang('type_a_number') ?>" class="hidden">
+                                                </div>
+                                                <div class="hiden">
+                                                    <div class="hidden">
+                                                        <div class="hidden">
+                                                            <label for="added_after"><?= lang('added_after') ?></label>
+                                                            <div class="hidden">
+                                                                <input type="text"
+                                                                    value="<?= isset($_GET['added_after']) ? htmlspecialchars($_GET['added_after']) : '' ?>"
+                                                                    name="added_after" id="added_after" class="hidden">
+                                                                <span class="hidden"><i class="fa fa-calendar"
+                                                                        aria-hidden="true"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hidden">
+                                                        <div class="hidden">
+                                                            <label for="hidden"><?= lang('added_before') ?></label>
+                                                            <div class="hidden">
+                                                                <input type="text"
+                                                                    value="<?= isset($_GET['added_before']) ? htmlspecialchars($_GET['added_before']) : '' ?>"
+                                                                    name="added_before" id="added_before"
+                                                                    class="hidden">
+                                                                <span class="hidden"><i class="hidden"
+                                                                        aria-hidden="true"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hidden">
+                                                    <label
+                                                        for="search_in_body"><?= lang('search_by_keyword_body') ?></label>
+                                                    <input class="hidden"
+                                                        value="<?= isset($_GET['search_in_body']) ? htmlspecialchars($_GET['search_in_body']) : '' ?>"
+                                                        name="search_in_body" id="search_in_body" type="text" />
+                                                </div>
+                                                <div class="hidden">
+                                                    <div class="hidden">
+                                                        <div class="hidden">
+                                                            <label for="price_from"><?= lang('price_from') ?></label>
+                                                            <input type="text"
+                                                                value="<?= isset($_GET['price_from']) ? htmlspecialchars($_GET['price_from']) : '' ?>"
+                                                                name="price_from" id="price_from" class="hidden"
+                                                                placeholder="<?= lang('type_a_number') ?>">
+                                                        </div>
+                                                    </div>
+                                                    <div class="hidden">
+                                                        <div class="hidden">
+                                                            <label for="price_to"><?= lang('price_to') ?></label>
+                                                            <input type="text" name="price_to"
+                                                                value="<?= isset($_GET['price_to']) ? htmlspecialchars($_GET['price_to']) : '' ?>"
+                                                                id="price_to" class="hidden"
+                                                                placeholder="<?= lang('type_a_number') ?>">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="hidden">
+                                                    <i class="hidden" aria-hidden="true"></i>
+                                                </button>
+                                                <a class="hidden" id="clear-form"
+                                                    href="javascript:void(0);"><?= lang('clear_form') ?></a>
+                                            </div>
+                                        </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="col-xl-4 col-lg-5">
+                    <div class="col-xl-4 col-lg-5" >
                         <div class="user-panel">
                             <div class="up-item">
                                 <i class="fa fa-user"></i>
@@ -327,9 +438,10 @@
                                     <a href="<?= LANG_URL . '/myaccount' ?>"> <?= lang('my_acc') ?></a>
                                 </a>
                                 <?php } else { ?>
-                               
 
-                                <a href="<?= LANG_URL . '/register' ?>">Sign</a> In or <a  href="<?= LANG_URL . '/register' ?>">Create Account</a>
+
+                                <a href="<?= LANG_URL . '/register' ?>">Sign</a> In or <a
+                                    href="<?= LANG_URL . '/register' ?>">Create Account</a>
                                 <!-- <a href="#">Sign</a> In or <a href="#">Create Account</a> -->
                                 <?php } ?>
 
@@ -375,22 +487,22 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Products</a></li>
-                   
+
                     <li><a href="#">Jewelry
                             <span class="new">New</span>
                         </a></li>
                     <li><a href="#">Categories</a>
                         <ul class="sub-menu">
-                            
 
-                        <?php
+
+                            <?php
 
 function loop_tree_nav($nav_categories, $is_recursion = false)
 {
     if ($is_recursion == false) {
 ?>
 
-    <?php
+                            <?php
     }
     foreach ($nav_categories as $nav_category) {
         $children = false;
@@ -398,17 +510,17 @@ function loop_tree_nav($nav_categories, $is_recursion = false)
             $children = true;
         }
         ?>
-  <li>  <a href="javascript:void(0);"
-        data-categorie-id="<?= $nav_category['id'] ?>"
-        class="go-category <?= $children == true ? 'mega-title' : '' ?>"><?= $nav_category['name'] ?></a> </li>
-    <?php
+                            <li> <a href="javascript:void(0);" data-categorie-id="<?= $nav_category['id'] ?>"
+                                    class="go-category <?= $children == true ? 'mega-title' : '' ?>"><?= $nav_category['name'] ?></a>
+                            </li>
+                            <?php
             if ($children === true) {
                 loop_tree_nav($nav_category['children'], true);
             }
         }
         if ($is_recursion == false) {
             ?>
-<?php
+                            <?php
         }
     }
 

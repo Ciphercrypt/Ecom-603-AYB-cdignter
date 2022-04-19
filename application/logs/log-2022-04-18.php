@@ -1395,3 +1395,100 @@ ERROR - 2022-04-18 20:25:08 --> 404 Page Not Found: /index
 ERROR - 2022-04-18 20:25:09 --> 404 Page Not Found: /index
 ERROR - 2022-04-18 20:25:09 --> 404 Page Not Found: /index
 ERROR - 2022-04-18 20:25:10 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:33:47 --> Severity: Notice --> Undefined variable: brands C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:33:47 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:33:48 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:33:48 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:33:48 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:33:48 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:33:49 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:33:50 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:33:50 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:35:03 --> Severity: Notice --> Undefined variable: brands C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:35:03 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:35:05 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:35:05 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:35:05 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:35:05 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:35:05 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:35:07 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:35:08 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:35:47 --> Severity: Notice --> Undefined variable: brands C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:35:47 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:35:48 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:35:48 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:35:48 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:35:48 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:35:50 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:35:50 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:35:57 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:35:57 --> Severity: Warning --> file_get_contents(C:\xampp\htdocs\vishalsite\dudhaisite\application\views/templates\greenlabel\\assets\js\bootstrap.min.js.map): failed to open stream: No such file or directory C:\xampp\htdocs\vishalsite\dudhaisite\application\controllers\Loader.php 76
+ERROR - 2022-04-18 20:35:57 --> Severity: Warning --> file_get_contents(C:\xampp\htdocs\vishalsite\dudhaisite\application\views/templates\greenlabel\\assets\css\bootstrap.min.css.map): failed to open stream: No such file or directory C:\xampp\htdocs\vishalsite\dudhaisite\application\controllers\Loader.php 59
+ERROR - 2022-04-18 20:37:17 --> Severity: Notice --> Undefined variable: brands C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:37:17 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:37:19 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:37:19 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:37:19 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:37:19 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:37:21 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:37:21 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:04 --> Severity: Notice --> Undefined variable: brands C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:38:04 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:38:05 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:05 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:05 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:05 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:07 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:08 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:18 --> Severity: Notice --> Undefined variable: brands C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:38:18 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:38:19 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:19 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:19 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:19 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:21 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:21 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:35 --> Severity: Notice --> Undefined variable: brands C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:38:35 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:38:36 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:36 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:36 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:36 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:37 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:38 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:48 --> Severity: Notice --> Undefined variable: brands C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:38:48 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:38:49 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:49 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:49 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:49 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:50 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:38:51 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:39:02 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:39:02 --> Severity: Warning --> file_get_contents(C:\xampp\htdocs\vishalsite\dudhaisite\application\views/templates\greenlabel\\assets\js\bootstrap.min.js.map): failed to open stream: No such file or directory C:\xampp\htdocs\vishalsite\dudhaisite\application\controllers\Loader.php 76
+ERROR - 2022-04-18 20:39:02 --> Severity: Warning --> file_get_contents(C:\xampp\htdocs\vishalsite\dudhaisite\application\views/templates\greenlabel\\assets\css\bootstrap.min.css.map): failed to open stream: No such file or directory C:\xampp\htdocs\vishalsite\dudhaisite\application\controllers\Loader.php 59
+ERROR - 2022-04-18 20:39:14 --> Severity: Notice --> Undefined variable: brands C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:39:14 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 20:39:15 --> Severity: Warning --> file_get_contents(C:\xampp\htdocs\vishalsite\dudhaisite\application\views/templates\greenlabel\\assets\css\bootstrap.min.css.map): failed to open stream: No such file or directory C:\xampp\htdocs\vishalsite\dudhaisite\application\controllers\Loader.php 59
+ERROR - 2022-04-18 20:39:15 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:39:16 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:39:16 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:39:16 --> Severity: Warning --> file_get_contents(C:\xampp\htdocs\vishalsite\dudhaisite\application\views/templates\greenlabel\\assets\js\bootstrap.min.js.map): failed to open stream: No such file or directory C:\xampp\htdocs\vishalsite\dudhaisite\application\controllers\Loader.php 76
+ERROR - 2022-04-18 20:39:16 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:39:16 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:39:16 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 20:39:17 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 21:02:13 --> Severity: Notice --> Undefined variable: brands C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 21:02:14 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 21:02:15 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 21:02:17 --> Severity: Notice --> Undefined variable: brands C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 21:02:17 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\vishalsite\dudhaisite\application\views\templates\greenlabel\_parts\header.php 431
+ERROR - 2022-04-18 21:02:19 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 21:02:19 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 21:02:19 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 21:02:19 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 21:02:19 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 21:02:20 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 21:50:26 --> Severity: Warning --> file_get_contents(C:\xampp\htdocs\vishalsite\dudhaisite\application\views/templates\greenlabel\\assets\js\bootstrap.min.js.map): failed to open stream: No such file or directory C:\xampp\htdocs\vishalsite\dudhaisite\application\controllers\Loader.php 76
+ERROR - 2022-04-18 21:50:26 --> 404 Page Not Found: /index
+ERROR - 2022-04-18 21:50:26 --> Severity: Warning --> file_get_contents(C:\xampp\htdocs\vishalsite\dudhaisite\application\views/templates\greenlabel\\assets\css\bootstrap.min.css.map): failed to open stream: No such file or directory C:\xampp\htdocs\vishalsite\dudhaisite\application\controllers\Loader.php 59

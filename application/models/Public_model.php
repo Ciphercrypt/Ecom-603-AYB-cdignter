@@ -525,7 +525,7 @@ class Public_model extends CI_Model
 
     public function setSubscribe($array)
     {
-        $num = $this->db->where('email', $arr['email'])->count_all_results('subscribed');
+        $num = $this->db->where('email', $array['email'])->count_all_results('subscribed');
         if ($num == 0) {
             $this->db->insert('subscribed', $array);
         }

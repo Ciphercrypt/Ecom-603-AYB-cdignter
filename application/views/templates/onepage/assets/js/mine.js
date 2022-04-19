@@ -1,27 +1,38 @@
-$(document).ready(function () {
-    if ($(window).scrollTop() != 0) {
-        $(".navbar-onepoge").addClass("navbar-white");
-    } else {
-        $(".navbar-onepoge").removeClass("navbar-white");
-    }
-
+//Tootip activator
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
 });
-$(window).scroll(function () {
-    if ($(this).scrollTop() != 0) {
-        $(".navbar-onepoge").addClass("navbar-white");
-    } else {
-        $(".navbar-onepoge").removeClass("navbar-white");
-    }
-    if ($('.after-main').visible()) {
-        $(".after-main").addClass("animated flipInX");
-    }
-    if ($('.page-second').visible()) {
-        $(".page-second .page-info").addClass("animated bounceInLeft");
-    }
-    if ($('.page-third').visible()) {
-        $(".page-third .page-info").addClass("animated bounceInRight");
-    }
-    if ($('#products').visible()) {
-        $("#products").addClass("animated flipInX");
-    }
+
+//xs hidden categories
+$("#show-xs-nav").click(function () {
+    $("#nav-categories").toggle("slow", function () {
+        if ($(this).is(":visible") == true) {
+            $("#show-xs-nav .hidde-sp").show();
+            $("#show-xs-nav .show-sp").hide();
+        } else {
+            $("#show-xs-nav .hidde-sp").hide();
+            $("#show-xs-nav .show-sp").show();
+        }
+    });
+});
+
+// Instantiate the Bootstrap carousel
+$('.multi-item-carousel').carousel({
+  interval: false
+});
+
+// for every slide in carousel, copy the next slide's item in the slide.
+// Do the same for the next, next item.
+$('.multi-item-carousel .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+  
+  if (next.next().length>0) {
+    next.next().children(':first-child').clone().appendTo($(this));
+  } else {
+  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+  }
 });
