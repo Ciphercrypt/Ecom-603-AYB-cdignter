@@ -2,7 +2,7 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 
-if (count($sliderProducts) > 0) {
+if (count($sliderProducts) > 0 && !isset($_GET['search_in_title'])) {
 ?>
 <section class="hero-section">
 	<div class="hero-slider owl-carousel">
@@ -74,6 +74,11 @@ if (count($sliderProducts) > 0) {
 </section>
 
 <?php } ?>
+
+
+
+
+
 
 <section class="features-section">
 	<div class="container-fluid">
@@ -155,6 +160,11 @@ if (count($sliderProducts) > 0) {
 
 											foreach ($products as $product) {
 										?>
+
+
+
+
+
 
 
 										<!-- <a href="<?= LANG_URL . '/' . $product['url'] ?>"> -->
@@ -355,11 +365,32 @@ if (count($sliderProducts) > 0) {
 
 ?>
 
+<!-- 
+
+			<div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1">
+				<div class="card"> <img class="card-img-top" src="="
+						<?= base_url('attachments/shop_images/' . $product['image']) ?>">
+					<div class="card-body">
+						<h5><b>Bagels</b> </h5>
+						<div class="d-flex flex-row my-2">
+							<div class="text-muted">₹35/piece</div>
+							<div class="ml-auto"> <button class="border rounded bg-white sign"><span class="fa fa-plus"
+										id="orange"></span></button>
+								<span class="px-sm-1">1
+									pc</span> <button class="border rounded bg-white sign"><span class="fa fa-minus"
+										id="orange"></span></button>
+							</div>
+						</div> <button class="btn w-100 rounded my-2">Add to cart</button>
+					</div>
+				</div>
+			</div> -->
+
+
 			<div class="col-lg-3 col-sm-6">
 				<div class="product-item">
 					<div class="pi-pic">
-					<a href="">
-						<img src="<?= base_url('attachments/shop_images/' . $best_sellers['image']) ?>" alt=""> </a>
+						<a href="">
+							<img src="<?= base_url('attachments/shop_images/' . $best_sellers['image']) ?>" alt=""> </a>
 						<div class="pi-links">
 							<a href="javascript:void(0);" data-categorie-id="<?= $best_sellers['id'] ?>"
 								class="add-card"><i class="fa fa-shopping-cart"></i><span>ADD TO CART</span></a>
@@ -369,13 +400,13 @@ if (count($sliderProducts) > 0) {
 					<div class="pi-text">
 						<h6>₹ <?= $best_sellers['price'] ?></h6>
 						<p>
-						<?= character_limiter($best_sellers['title'], 50) ?>
-							</p>
-							</a>
+							<?= character_limiter($best_sellers['title'], 50) ?>
+						</p>
+						</a>
 					</div>
 				</div>
 			</div>
-			
+
 
 
 			<?php
@@ -523,17 +554,17 @@ if (count($sliderProducts) > 0) {
 </div>
 
 <h3 class="part-label"><?= lang('products') ?></h3>
-        <div class="row products">
-            <?php
+<div class="row products">
+	<?php
             if (!empty($products)) {
                 $load::getProducts($products, 'col-sm-4 col-md-3', false);
             } else {
                 ?>
-                <div class="col-xs-12">
-                    <div class="alert alert-danger"><?= lang('no_products') ?></div>
-                </div>
-            <?php } ?>
-        </div>
+	<div class="col-xs-12">
+		<div class="alert alert-danger"><?= lang('no_products') ?></div>
+	</div>
+	<?php } ?>
+</div>
 
 
 <!-- 

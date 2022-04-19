@@ -143,7 +143,7 @@ class Home extends MY_Controller
         $data['showBrands'] = $this->Home_admin_model->getValueStore('showBrands');
         $data['brands'] = $this->Brands_model->getBrands();
         $data['links_pagination'] = pagination('home', $rowscount, $this->num_rows);
-        $this->render('home', $head, $data);
+        $this->render('shop', $head, $data);
     }
 
     private function getHomeCategories($categories)

@@ -20,6 +20,8 @@
 
     <link rel="stylesheet" href="<?= base_url('templatecss/bootstrap.min.css ') ?>" />
     <link rel="stylesheet" href="<?= base_url('templatecss/font-awesome.min.css ') ?>" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" />
+    
     <link rel="stylesheet" href="<?= base_url('templatecss/flaticon.css ') ?>" />
     <link rel="stylesheet" href="<?= base_url('templatecss/slicknav.min.css ') ?>" />
     <link rel="stylesheet" href="<?= base_url('templatecss/jquery-ui.min.css ') ?>" />
@@ -320,9 +322,9 @@
                     </div>
                     <div class="col-xl-6 col-lg-5">
 
-
+                    
                         <div class="">
-                            <form method="GET" id="bigger-search" class="header-search-form" action="<?= LANG_URL ?>">
+                            <form method="GET" id="bigger-search" class="header-search-form" action="<?= LANG_URL ?>/shop">
                                 <div class="">
                                     <input type="text" id="search_in_title"
                                         value="<?= isset($_GET['search_in_title']) ? htmlspecialchars($_GET['search_in_title']) : '' ?>"
