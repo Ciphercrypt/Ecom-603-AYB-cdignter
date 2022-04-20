@@ -26,10 +26,10 @@ if (count($sliderProducts) > 0 && !isset($_GET['search_in_title'])) {
 						<a href="#" class="site-btn sb-white">ADD TO CART</a>
 					</div>
 				</div>
-				<div class="offer-card text-white">
+				<div class="offer-card text-white" style="background-color:greenyellow;">
 					<span>from</span>
-					<h2>$29</h2>
-					<p>SHOP NOW</p>
+					<h2>₹29</h2>
+					<p>KNOW MORE</p>
 				</div>
 			</div>
 		</div>
@@ -91,12 +91,12 @@ if (count($sliderProducts) > 0 && !isset($_GET['search_in_title'])) {
 					<h2>Fast Secure Payments</h2>
 				</div>
 			</div>
-			<div class="col-md-4 p-0 feature">
+			<div class="col-md-4 p-0 feature" style="background-color:green;">
 				<div class="feature-inner">
 					<div class="feature-icon">
-						<span class="fa fa-star" style="font-size:300%;"></span>
+						<span class="fa fa-leaf" style="font-size:300%;"></span>
 					</div>
-					<h2>Premium Products</h2>
+					<h2>100% Ayurvedic Products</h2>
 				</div>
 			</div>
 			<div class="col-md-4 p-0 feature">
@@ -104,7 +104,7 @@ if (count($sliderProducts) > 0 && !isset($_GET['search_in_title'])) {
 					<div class="feature-icon">
 						<span class="fa fa-paper-plane" style="font-size:300%;"></span>
 					</div>
-					<h2>Free & fast Delivery</h2>
+					<h2> fast Delivery</h2>
 				</div>
 			</div>
 		</div>
@@ -553,7 +553,7 @@ if (count($sliderProducts) > 0 && !isset($_GET['search_in_title'])) {
 	<div class="clearfix"></div>
 </div>
 
-<h3 class="part-label"><?= lang('products') ?></h3>
+<!-- <h3 class="part-label"><?= lang('products') ?></h3>
 <div class="row products">
 	<?php
             if (!empty($products)) {
@@ -564,7 +564,7 @@ if (count($sliderProducts) > 0 && !isset($_GET['search_in_title'])) {
 		<div class="alert alert-danger"><?= lang('no_products') ?></div>
 	</div>
 	<?php } ?>
-</div>
+</div> -->
 
 
 <!-- 

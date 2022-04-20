@@ -93,15 +93,15 @@ class Users extends MY_Controller
         if (mb_strlen(trim($_POST['name'])) == 0) {
             $errors[] = lang('please_enter_name');
         }
-        if (mb_strlen(trim($_POST['city'])) == 0) {
-            $errors[] = lang('please_enter_city');
-        }
-        if (mb_strlen(trim($_POST['pincode'])) == 0) {
-            $errors[] = lang('please_enter_pincode');
-        }
-        if (mb_strlen(trim($_POST['detailed_address'])) == 0) {
-            $errors[] = lang('please_enter_address');
-        }
+        // if (mb_strlen(trim($_POST['city'])) == 0) {
+        //     $errors[] = lang('please_enter_city');
+        // }
+        // if (mb_strlen(trim($_POST['pincode'])) == 0) {
+        //     $errors[] = lang('please_enter_pincode');
+        // }
+        // if (mb_strlen(trim($_POST['detailed_address'])) == 0) {
+        //     $errors[] = lang('please_enter_address');
+        // }
         if (mb_strlen(trim($_POST['phone'])) == 0) {
             $errors[] = lang('please_enter_phone');
         }

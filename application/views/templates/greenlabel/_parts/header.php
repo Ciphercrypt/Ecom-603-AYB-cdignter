@@ -490,7 +490,7 @@
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Products</a></li>
 
-                    <li><a href="#">Jewelry
+                    <li><a href="#">What's new?
                             <span class="new">New</span>
                         </a></li>
                     <li><a href="#">Categories</a>
