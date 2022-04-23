@@ -1,33 +1,41 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
-<div class="inner-nav">
-    <div class="container">
-        <?= lang('home') ?> <span class="active"> > <?= lang('shop') ?></span>
-    </div>
-</div>
-<div class="container" id="view-product">
-    <div class="row top-part">
-        <div class="col-sm-4">
-            <div <?= $product['folder'] != null ? 'style="margin-bottom:20px;"' : '' ?>>
-                <img src="<?= base_url('/attachments/shop_images/' . $product['image']) ?>" style="width:auto; height:auto;" data-num="0" class="other-img-preview img-responsive img-thumbnail img-sl the-image" alt="<?= str_replace('"', "'", $product['title']) ?>">
-            </div>
-            <?php
+<section class="product-section">
+	<div class="container">
+		<div class="back-link">
+			<a href="./category.html"> &lt;&lt; Back to Category</a>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="product-pic-zoom">
+					<img class="product-big-img" src="<?= base_url('/attachments/shop_images/' . $product['image']) ?>"
+						alt="">
+				</div>
+				<div class="product-thumbs" tabindex="1" style="overflow: hidden; outline: none;">
+					<div class="product-thumbs-track">
+
+						<div class="pt active"
+							data-imgbigurl="<?= base_url('/attachments/shop_images/' . $product['image']) ?>"><img
+								src="<?= base_url('/attachments/shop_images/' . $product['image']) ?>"
+								alt="<?= str_replace('"', "'", $product['title']) ?>"></div>
+
+
+						<?php
             if ($product['folder'] != null) {
                 $dir = "attachments/shop_images/" . $product['folder'] . '/';
                 ?>
-                <div class="row">
-                    <?php
+
+						<?php
                     if (is_dir($dir)) {
                         if ($dh = opendir($dir)) {
                             $i = 1;
                             while (($file = readdir($dh)) !== false) {
                                 if (is_file($dir . $file)) {
                                     ?>
-                                    <div class="col-xs-4 col-sm-6 col-md-4 text-center">
-                                        <img src="<?= base_url($dir . $file) ?>" data-num="<?= $i ?>" class="other-img-preview img-sl img-thumbnail the-image" alt="<?= str_replace('"', "'", $product['title']) ?>">
-                                    </div>
-                                    <?php
+
+						<div class="pt " data-imgbigurl="<?= base_url($dir . $file) ?>"><img
+								src="<?= base_url($dir . $file) ?>"
+								alt="<?= str_replace('"', "'", $product['title']) ?>"></div>
+
+						<?php
                                     $i++;
                                 }
                             }
@@ -35,128 +43,277 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         }
                     }
                     ?>
-                </div>
-                <?php
-            }
-            ?>
-        </div>
-        <div class="col-sm-8">
-            <div class="product-info">
-               <h1><s><?= $product['title'] ?></s></h1>
-                <div class="row row-info">
-                    <div class="col-sm-6"><b><?= lang('price') ?>:</b></div>
-                    <div class="col-sm-6"><?= $product['price'] . CURRENCY ?></div>
-                    <div class="col-sm-12 border-bottom"></div>
-                </div>
-                <?php if ($product['old_price'] != '') { ?>
-                    <div class="row row-info">
-                        <div class="col-sm-6"><b><?= lang('old_price') ?>:</b></div>
-                        <div class="col-sm-6"><?= $product['old_price'] . CURRENCY ?></div>
-                        <div class="col-sm-12 border-bottom"></div>
-                    </div>
-                <?php } if ($publicQuantity == 1) { ?>
-                    <div class="row row-info">
-                        <div class="col-sm-6">
-                            <b><?= lang('in_stock') ?>:</b>
-                        </div>
-                        <div class="col-sm-6"><?= $product['quantity'] ?></div>
-                        <div class="col-sm-12 border-bottom"></div>
-                    </div>
-                <?php } ?>
-                <div class="row row-info">
-                    <div class="col-sm-6"><b><?= lang('num_added_to_cart') ?>:</b></div>
-                    <div class="col-sm-6"><?php
-                        @$result = array_count_values($_SESSION['shopping_cart']);
-                        if (isset($result[$product['id']]))
-                            echo $result[$product['id']];
-                        else
-                            echo 0;
-                        ?></div>
-                    <div class="col-sm-12 border-bottom"></div>
-                </div>
-                <?php if ($publicDateAdded == 1) { ?>
-                    <div class="row row-info">
-                        <div class="col-sm-6"><b><?= lang('added_on') ?>:</b></div>
-                        <div class="col-sm-6"><?= date('m.d.Y', $product['time']) ?></div>
-                        <div class="col-sm-12 border-bottom"></div>
-                    </div>
-                <?php } ?>
-                <div class="row row-info">
-                    <div class="col-sm-6"><b><?= lang('in_category') ?>:</b></div>
-                    <div class="col-sm-6">
-                        <a href="javascript:void(0);" class="go-category btn-blue-round" data-categorie-id="<?= $product['shop_categorie'] ?>">
-                            <?= $product['categorie_name'] ?>
-                        </a>
-                    </div>
-                    <div class="col-sm-12 border-bottom">
 
-                    </div>
-                </div>
-                <div class="row row-info">
-                    <div class="col-sm-6"></div>
-                    <div class="col-sm-6 manage-buttons">
-                        <?php if ($product['quantity'] > 0) { ?>
-                            <div>
-                                <a href="javascript:void(0);" data-id="<?= $product['id'] ?>" data-goto="<?= LANG_URL . '/checkout' ?>" class="add-to-cart btn-add">
-                                    <span class="text-to-bg"><?= lang('buy_now') ?></span>
-                                </a>
-                            </div>
-                            <a href="javascript:void(0);" data-id="<?= $product['id'] ?>" data-goto="<?= LANG_URL . '/shopping-cart' ?>" class="add-to-cart btn-add">
-                                <span class="text-to-bg"><?= lang('add_to_cart') ?></span>
-                            </a>
-                        <?php } else { ?>
-                            <div class="alert alert-info"><?= lang('out_of_stock_product') ?></div>
-                        <?php } ?>
-                    </div>
-                    <div class="col-sm-12 border-bottom"></div>
-                </div> 
-            </div>
-        </div>
-    </div> 
-    <div id="description">
-        <div class="header">
-            <span class="title"><?= lang('description') ?></span>
-        </div>
-        <?= $product['description'] ?>
-    </div>
-    <div class="row orders-from-category" id="products-side">
-        <h2><?= lang('order_from_category') ?></h2>
-        <?php
-        if (!empty($sameCagegoryProducts)) {
-            foreach ($sameCagegoryProducts as $prod) {
-                ?>
-                <div class="col-sm-6 col-md-4 product-inner">
-                    <a href="<?= LANG_URL . '/' . $prod['url'] ?>">
-                        <img src="<?= base_url('attachments/shop_images/' . $prod['image']) ?>" alt="" class="img-responsive">
-                    </a>
-                    <h3><?= $prod['title'] ?></h3>
-                    <span class="price"><?= $prod['price'] . CURRENCY ?></span>
-                    <a class="add-to-cart" data-goto="<?= LANG_URL . '/checkout' ?>" href="javascript:void(0);" data-id="<?= $prod['id'] ?>">
-                        <?= lang('add_to_cart') ?>
-                    </a>
-                </div>
-                <?php
+						<?php
             }
-        } else {
             ?>
-            <div class="alert alert-info"><?= lang('no_same_category_products') ?></div>
-            <?php
-        }
-        ?> 
-    </div>
-    <div id="modalImagePreview" class="modal">
-        <div class="image-preview-container">
-            <div class="modal-content">
-                <div class="inner-prev-container">
-                    <img id="img01" alt="">
-                    <span class="close">&times;</span>
-                    <span class="img-series"></span>
+
+
+
+
+						<!-- <div class="pt active"
+							data-imgbigurl="http://localhost/ayurbiocin/attachments/shop_images/H12.jpg"><img
+								src="http://localhost/ayurbiocin/attachments/shop_images/H12.jpg" alt=""></div>
+
+						<div class="pt"
+							data-imgbigurl="https://n.nordstrommedia.com/id/sr3/71765f60-c648-43c4-85bd-778675c636f5.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196">
+							<img src="https://n.nordstrommedia.com/id/sr3/71765f60-c648-43c4-85bd-778675c636f5.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+								alt=""></div>
+						<div class="pt" data-imgbigurl="http://localhost/ayurbiocin/attachments/shop_images/H12.jpg">
+							<img src="http://localhost/ayurbiocin/attachments/shop_images/H12.jpg" alt=""></div>
+						<div class="pt" data-imgbigurl="http://localhost/ayurbiocin/attachments/shop_images/H12.jpg">
+							<img src="http://localhost/ayurbiocin/attachments/shop_images/H12.jpg" alt=""></div> -->
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 product-details">
+				<h2 class="p-title"><?= $product['title'] ?></h2>
+				<h3 class="p-price"><?= $product['price'] . CURRENCY ?></h3>
+				<?php if( $product['quantity']>=1)
+				{
+					?>
+				<h4 class="p-stock">Available: <span>In Stock</span></h4>
+
+				<?php
+				} else{ ?>
+				<h4 class="p-stock"> <span>Out of Stock</span></h4>
+
+				<?php	}?>
+				<div class="p-rating">
+					<i class="fa fa-star-o"></i>
+					<i class="fa fa-star-o"></i>
+					<i class="fa fa-star-o"></i>
+					<i class="fa fa-star-o"></i>
+					<i class="fa fa-star-o fa-fade"></i>
+				</div>
+				<div class="p-review">
+					<a href="">3 reviews</a>|<a href="">Add your review</a>
+				</div>
+
+				<div class="quantity">
+					<p>Quantity</p>
+					<div class="pro-qty"><input type="text" value="1"></div>
+				</div>
+
+
+				<?php if ($product['quantity'] > 0) { ?>
+
+				<a href="javascript:void(0);" data-id="<?= $product['id'] ?>" data-goto="<?= LANG_URL . '/checkout' ?>"
+					class="site-btn">
+					<span class="text-to-bg" class="fa fa-shopping-cart"><?= lang('buy_now') ?></span>
+				</a>
+
+				<a href="javascript:void(0);" data-id="<?= $product['id'] ?>"
+					data-goto="<?= LANG_URL . '/shopping-cart' ?>" class="site-btn">
+					<span class="text-to-bg" class="fa fa-shopping-cart"><?= lang('add_to_cart') ?></span>
+				</a>
+				<?php } else { ?>
+				<div class="alert alert-info"><?= lang('out_of_stock_product') ?></div>
+				<?php } ?>
+
+
+				<div class="quantity">
+					<p>Description</p>
+				</div>
+
+				<div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+					<div class="panel-body">
+						<?= $product['description'] ?>
+					</div>
+				</div>
+
+
+				<div id="accordion" class="accordion-area">
+
+					<div class="panel">
+						<div class="panel-header" id="headingTwo">
+							<button class="panel-link" data-toggle="collapse" data-target="#collapse2"
+								aria-expanded="false" aria-controls="collapse2">care details </button>
+						</div>
+						<div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+							<div class="panel-body">
+								<img src="./img/cards.png" alt="">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so
+									dales. Phasellus sagittis auctor gravida. Integer bibendum sodales arcu id te
+									mpus. Ut consectetur lacus leo, non scelerisque nulla euismod nec.</p>
+							</div>
+						</div>
+					</div>
+					<div class="panel">
+						<div class="panel-header" id="headingThree">
+							<button class="panel-link" data-toggle="collapse" data-target="#collapse3"
+								aria-expanded="false" aria-controls="collapse3">shipping & Returns</button>
+						</div>
+						<div id="collapse3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+							<div class="panel-body">
+								<h4>7 Days Returns</h4>
+								<p>Cash on Delivery Available<br>Home Delivery <span>3 - 4 days</span></p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so
+									dales. Phasellus sagittis auctor gravida. Integer bibendum sodales arcu id te
+									mpus. Ut consectetur lacus leo, non scelerisque nulla euismod nec.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="social-sharing">
+					<a href=""><i class="fa fa-google-plus"></i></a>
+					<a href=""><i class="fa fa-pinterest"></i></a>
+					<a href=""><i class="fa fa-facebook"></i></a>
+					<a href=""><i class="fa fa-twitter"></i></a>
+					<a href=""><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- product section end -->
+
+
+<!-- RELATED PRODUCTS section -->
+<section class="related-product-section">
+	<div class="container">
+		<div class="section-title">
+			<h2>RELATED PRODUCTS</h2>
+		</div>
+		<div class="product-slider owl-carousel">
+			
+		<?php if (!empty($sameCagegoryProducts)) {
+                foreach ($sameCagegoryProducts as $product) {
+                    ?>
+                   
+
+
+                    <div class="card"> 
+                    <a href="<?= LANG_URL . '/' . $product['url'] ?>">
+                    <img class="card-img-top" src="<?= base_url('attachments/shop_images/' . $product['image']) ?>" alt="<?= $product['title'] ?>" class="img-responsive">  </a>
+                    <div class="card-body">
+                     <a href="<?= LANG_URL . '/' . $product['url'] ?>">   <h5><b><?= $product['title'] ?></b> </h5> </a>
+                        <div class="d-flex flex-row my-2">
+                            <div class="text-muted"><?= $product['price'] . CURRENCY ?></div>
+                            <div class="ml-auto"> <button class="border rounded bg-white sign"><span class="fa fa-plus" id="orange"></span></button> <span class="px-sm-1">1 pc</span> <button class="border rounded bg-white sign"><span class="fa fa-minus" id="orange"></span></button> </div>
+                        </div> <button class="btn w-100 rounded my-2" data-goto="<?= LANG_URL . '/checkout' ?>" href="javascript:void(0);" data-id="<?= $product['id'] ?>" >Add to cart</button>
+                    </div>
                 </div>
-            </div>
-            <a href="javascript:void(0);" class="inner-next"></a>
-            <a href="javascript:void(0);" class="inner-prev"></a>
-        </div>
-        <div id="caption"></div>
-    </div>
-</div>
-<script src="<?= base_url('assets/js/image-preveiw.js') ?>"></script>
+
+                   
+               
+
+
+                    <?php
+                }
+            } else {
+				?>
+				<div class="alert alert-info"><?= lang('no_same_category_products') ?></div>
+				<?php
+			}
+			?> 
+			
+		</div>
+	</div>
+</section>
+<!-- RELATED PRODUCTS section end -->
+
+
+<!-- Footer section -->
+<section class="footer-section">
+	<div class="container">
+		<div class="footer-logo text-center">
+			<a href="index.html"><img src="./img/logo-light.png" alt=""></a>
+		</div>
+		<div class="row">
+			<div class="col-lg-3 col-sm-6">
+				<div class="footer-widget about-widget">
+					<h2>About</h2>
+					<p>Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla
+						faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
+					<img src="img/cards.png" alt="">
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6">
+				<div class="footer-widget about-widget">
+					<h2>Questions</h2>
+					<ul>
+						<li><a href="">About Us</a></li>
+						<li><a href="">Track Orders</a></li>
+						<li><a href="">Returns</a></li>
+						<li><a href="">Jobs</a></li>
+						<li><a href="">Shipping</a></li>
+						<li><a href="">Blog</a></li>
+					</ul>
+					<ul>
+						<li><a href="">Partners</a></li>
+						<li><a href="">Bloggers</a></li>
+						<li><a href="">Support</a></li>
+						<li><a href="">Terms of Use</a></li>
+						<li><a href="">Press</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6">
+				<div class="footer-widget about-widget">
+					<h2>Questions</h2>
+					<div class="fw-latest-post-widget">
+						<div class="lp-item">
+							<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/1.jpg"></div>
+							<div class="lp-content">
+								<h6>what shoes to wear</h6>
+								<span>Oct 21, 2018</span>
+								<a href="#" class="readmore">Read More</a>
+							</div>
+						</div>
+						<div class="lp-item">
+							<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
+							<div class="lp-content">
+								<h6>trends this year</h6>
+								<span>Oct 21, 2018</span>
+								<a href="#" class="readmore">Read More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6">
+				<div class="footer-widget contact-widget">
+					<h2>Questions</h2>
+					<div class="con-info">
+						<span>C.</span>
+						<p>Your Company Ltd </p>
+					</div>
+					<div class="con-info">
+						<span>B.</span>
+						<p>1481 Creekside Lane Avila Beach, CA 93424, P.O. BOX 68 </p>
+					</div>
+					<div class="con-info">
+						<span>T.</span>
+						<p>+53 345 7953 32453</p>
+					</div>
+					<div class="con-info">
+						<span>E.</span>
+						<p>office@youremail.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="social-links-warp">
+		<div class="container">
+			<div class="social-links">
+				<a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
+				<a href="" class="google-plus"><i class="fa fa-google-plus"></i><span>g+plus</span></a>
+				<a href="" class="pinterest"><i class="fa fa-pinterest"></i><span>pinterest</span></a>
+				<a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
+				<a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
+				<a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
+				<a href="" class="tumblr"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
+			</div>
+
+			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+			<p class="text-white text-center mt-5">Copyright &copy;<script>
+					document.write(new Date().getFullYear());
+				</script> All rights reserved | This template is made with <i class="fa fa-heart-o"
+					aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+		</div>
+	</div>
+</section>

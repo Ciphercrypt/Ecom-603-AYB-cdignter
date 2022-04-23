@@ -11,6 +11,7 @@
     <meta property="og:description" content="<?= $description ?>" />
     <meta property="og:url" content="<?= LANG_URL ?>" />
     <meta property="og:type" content="website" />
+
     <meta property="og:image"
         content="<?= isset($image) && !is_null($image) ? $image : base_url('assets/img/site-overview.png') ?>" />
     <title><?= $title ?></title>
@@ -20,7 +21,6 @@
 
     <link rel="stylesheet" href="<?= base_url('templatecss/bootstrap.min.css ') ?>" />
     <link rel="stylesheet" href="<?= base_url('templatecss/font-awesome.min.css ') ?>" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" />
     
     <link rel="stylesheet" href="<?= base_url('templatecss/flaticon.css ') ?>" />
     <link rel="stylesheet" href="<?= base_url('templatecss/slicknav.min.css ') ?>" />
@@ -28,14 +28,16 @@
     <link rel="stylesheet" href="<?= base_url('templatecss/owl.carousel.min.css ') ?>" />
     <link rel="stylesheet" href="<?= base_url('templatecss/animate.css ') ?>" />
     <link rel="stylesheet" href="<?= base_url('templatecss/style.css ') ?>" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-        media="screen">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"  >
+   
+
 
 
     <link href="<?= base_url('assets/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet" />
     <link href="<?= base_url('templatecss/custom.css') ?>" rel="stylesheet" />
     <script src="<?= base_url('assets/js/jquery.min.js') ?>"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script> 
     <script src="<?= base_url('loadlanguage/all.js') ?>"></script>
     <?php if ($cookieLaw != false) { ?>
     <script type="text/javascript">

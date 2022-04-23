@@ -134,6 +134,7 @@ var variable = {
 	<script src="<?= base_url('templatejs/jquery.zoom.min.js')?>"></script>
 	<script src="<?= base_url('templatejs/jquery-ui.min.js')?>"></script>
 	<script src="<?= base_url('templatejs/main.js')?>"></script>
+    <script src="<?= base_url('assets/bootstrap-select-1.12.1/js/bootstrap-select.min.js') ?>"> </script>
 
 </body>
 </html>

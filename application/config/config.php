@@ -27,7 +27,7 @@ date_default_timezone_set("Asia/Kolkata");
   | a PHP script and you can easily do that on your own.
   |
  */
-$config['base_url'] = defined('BASE_URL')?BASE_URL:'http://localhost/vishalsite/dudhaisite';
+$config['base_url'] = defined('BASE_URL')?BASE_URL:'http://localhost/ayurbiocin';
 
 /*
   |--------------------------------------------------------------------------

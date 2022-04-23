@@ -328,7 +328,7 @@ class Public_model extends CI_Model
                     'email' => $post['email'],
                     'phone' => $post['phone'],
                     'address' => $post['address'],
-                    'city' => $post['city'],
+                    // 'city' => $post['city'],
                     'post_code' => $post['post_code'],
                     'notes' => $post['notes']
                 ))) {

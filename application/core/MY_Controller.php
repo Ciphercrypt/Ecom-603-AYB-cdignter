@@ -48,7 +48,7 @@ class MY_Controller extends MX_Controller
         $head['nav_categories'] = $tree = buildTree1($all_categories);
         $this->load->view($this->template . '_parts/header', $head);
         $this->load->view($this->template . $view, $data);
-        $this->load->view($this->template . '_parts/footer', $footer);
+         $this->load->view($this->template . '_parts/footer', $footer);
     }
 
     /*

@@ -133,9 +133,7 @@ class Checkout extends MY_Controller
         if (mb_strlen(trim($post['address'])) == 0) {
             $errors[] = lang('address_empty');
         }
-        if (mb_strlen(trim($post['city'])) == 0) {
-            $errors[] = lang('invalid_city');
-        }
+       
         return $errors;
     }
 
